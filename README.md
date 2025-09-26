@@ -13,24 +13,19 @@ There is a need for a Google Generative AI API key for the generator.
  
  # Implementation:
   The project is implemented as a Retrieval-Augmented Generation (RAG) pipeline using Haystack with the following components:
+ 
  1. Document Store
-  
-  I use InMemoryDocumentStore to store the knowledge base (documents that Michael Scott can “learn” from).
-  Documents are loaded using TextFileToDocument and wrapped as Document objects.
-2. Embeddings
-  
-  SentenceTransformersDocumentEmbedder generates embeddings for documents.
-  SentenceTransformersTextEmbedder generates embeddings for user queries.
+     - I use InMemoryDocumentStore to store the knowledge base (documents that Michael Scott can “learn” from).
+     - Documents are loaded using TextFileToDocument and wrapped as Document objects.
+3. Embeddings
+     - SentenceTransformersDocumentEmbedder generates embeddings for documents.
+     - SentenceTransformersTextEmbedder generates embeddings for user queries.
 3. Retriever
-  
-  InMemoryEmbeddingRetriever retrieves the most relevant documents from the store based on query similarity.
+     - InMemoryEmbeddingRetriever retrieves the most relevant documents from the store based on query similarity.
 3. Prompt Building
-  
-  ChatPromptBuilder and ChatMessage are used to construct a custom prompt that tells the model to respond in the style of Michael Scott from The Office.
-4. Generator
-  
-  I use GoogleGenAIChatGenerator to generate the final response.
-  The generator combines the retrieved context with the Michael Scott–styled prompt to produce the answer.
+     - ChatPromptBuilder and ChatMessage are used to construct a custom prompt that tells the model to respond in the style of Michael Scott from The Office.
+5. Generator
+     - I use GoogleGenAIChatGenerator to generate the final response.
+     - The generator combines the retrieved context with the Michael Scott–styled prompt to produce the answer.
 5. Pipeline
-  
-  All components are connected in a Pipeline.
+     - All components are connected in a Pipeline.
