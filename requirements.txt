@@ -1,0 +1,9 @@
+Python 3.9+
+pip (to install packages)
+Google API Key (for GoogleGenAIChatGenerator)
+InMemoryDocumentStore for storing documents.
+SentenceTransformers for embeddings (both docs + queries).
+InMemoryEmbeddingRetriever to fetch relevant context.
+GoogleGenAIChatGenerator for generation (LLM).
+ChatPromptBuilder + ChatMessage for constructing the Michael Scott–style prompts.
+Pipeline to wire everything together.
