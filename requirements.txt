@@ -1,9 +1,14 @@
+haystack-ai
+"datasets>=2.6.1"
+"sentence-transformers>=4.1.0"
+google-genai-haystack
 Python 3.9+
-pip (to install packages)
-Google API Key (for GoogleGenAIChatGenerator)
-InMemoryDocumentStore for storing documents.
-SentenceTransformers for embeddings (both docs + queries).
-InMemoryEmbeddingRetriever to fetch relevant context.
-GoogleGenAIChatGenerator for generation (LLM).
-ChatPromptBuilder + ChatMessage for constructing the Michael Scott–style prompts.
-Pipeline to wire everything together.
+Google API Key
+InMemoryDocumentStore
+SentenceTransformers
+InMemoryEmbeddingRetriever
+GoogleGenAIChatGenerator
+ChatPromptBuilder + ChatMessage
+Pipeline
+load_dataset
+
